@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Alertes - GeoIA Sénégal</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <h1>Alertes <span>Météo</span></h1>
+            <button class="back-btn" onclick="location.href='index.html'">
+                <i class="fas fa-arrow-left"></i>
+            </button>
+        </header>
+
+        <!-- Alertes -->
+        <section class="alerts-section">
+            <div class="alert-form">
+                <h2><i class="fas fa-bell"></i> Créer une alerte</h2>
+                <form id="alert-form">
+                    <div class="form-group">
+                        <label for="alert-region">Région</label>
+                        <select id="alert-region">
+                            <option value="dakar">Dakar</option>
+                            <option value="thies">Thiès</option>
+                            <option value="saint-louis">Saint-Louis</option>
+                            <!-- Autres régions du Sénégal -->
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="alert-type">Type d'alerte</label>
+                        <select id="alert-type">
+                            <option value="heat">Vague de chaleur</option>
+                            <option value="rain">Pluies intenses</option>
+                            <option value="wind">Vent fort</option>
+                            <option value="other">Autre</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="alert-message">Message</label>
+                        <textarea id="alert-message" placeholder="Décrivez l'alerte..."></textarea>
+                    </div>
+                    <button type="submit" class="btn-submit">Envoyer l'alerte</button>
+                </form>
+            </div>
+
+            <div class="alerts-list">
+                <h2><i class="fas fa-history"></i> Alertes récentes</h2>
+                <div class="alert-item">
+                    <div class="alert-header">
+                        <span class="alert-type heat">Vague de chaleur</span>
+                        <span class="alert-region">Dakar</span>
+                        <span class="alert-date">Aujourd'hui, 10:30</span>
+                    </div>
+                    <div class="alert-message">
+                        Températures élevées attendues (40°C) entre 12h et 16h. Prenez vos précautions.
+                    </div>
+                </div>
+                <div class="alert-item">
+                    <div class="alert-header">
+                        <span class="alert-type rain">Pluies intenses</span>
+                        <span class="alert-region">Thiès</span>
+                        <span class="alert-date">Hier, 15:45</span>
+                    </div>
+                    <div class="alert-message">
+                        Fortes pluies prévues dans la soirée. Risque d'inondations dans les zones basses.
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="js/app.js"></script>
+    <script src="cordova.js"></script>
+</body>
+</html>

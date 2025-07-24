@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Carte Météo - GeoIA Sénégal</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <h1>Carte Météo <span>Sénégal</span></h1>
+            <button class="back-btn" onclick="location.href='index.html'">
+                <i class="fas fa-arrow-left"></i>
+            </button>
+        </header>
+
+        <!-- Carte -->
+        <section class="map-container">
+            <div id="senegal-map"></div>
+        </section>
+
+        <!-- Info Région -->
+        <section class="region-info" id="region-info">
+            <div class="info-header">
+                <h2 id="region-name">Sélectionnez une région</h2>
+                <button class="close-btn" id="close-info">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="info-content">
+                <div class="weather-summary">
+                    <div class="temp">--°C</div>
+                    <div class="description">--</div>
+                </div>
+                <div class="weather-details">
+                    <div class="detail">
+                        <i class="fas fa-temperature-high"></i>
+                        <span>Max: --°C</span>
+                    </div>
+                    <div class="detail">
+                        <i class="fas fa-temperature-low"></i>
+                        <span>Min: --°C</span>
+                    </div>
+                    <div class="detail">
+                        <i class="fas fa-tint"></i>
+                        <span>Humidité: --%</span>
+                    </div>
+                </div>
+                <div class="preventions">
+                    <h3><i class="fas fa-exclamation-triangle"></i> Préventions</h3>
+                    <p id="region-alerts">Aucune alerte pour cette région</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="js/map.js"></script>
+    <script src="cordova.js"></script>
+</body>
+</html>

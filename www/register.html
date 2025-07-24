@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Inscription - GeoIA Sénégal</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <div class="container auth-container">
+        <div class="auth-card">
+            <h1><i class="fas fa-user-plus"></i> Inscription</h1>
+            
+            <form id="register-form">
+                <div class="form-group">
+                    <label for="register-name">Nom complet</label>
+                    <input type="text" id="register-name" placeholder="Votre nom" required>
+                </div>
+                <div class="form-group">
+                    <label for="register-email">Email</label>
+                    <input type="email" id="register-email" placeholder="votre@email.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="register-password">Mot de passe</label>
+                    <input type="password" id="register-password" placeholder="••••••••" required>
+                </div>
+                <div class="form-group">
+                    <label for="register-confirm">Confirmer le mot de passe</label>
+                    <input type="password" id="register-confirm" placeholder="••••••••" required>
+                </div>
+                <div class="form-group">
+                    <label for="register-region">Région</label>
+                    <select id="register-region">
+                        <option value="dakar">Dakar</option>
+                        <option value="thies">Thiès</option>
+                        <option value="saint-louis">Saint-Louis</option>
+                        <!-- Autres régions du Sénégal -->
+                    </select>
+                </div>
+                <button type="submit" class="btn-submit">S'inscrire</button>
+            </form>
+
+            <div class="auth-links">
+                <p>Déjà un compte? <a href="login.html">Se connecter</a></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/app.js"></script>
+    <script src="cordova.js"></script>
+</body>
+</html>
